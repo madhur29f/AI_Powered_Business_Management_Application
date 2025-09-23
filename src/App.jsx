@@ -39,11 +39,6 @@ const PercentIcon = (props) => (
         <line x1="19" y1="5" x2="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle>
     </svg>
 );
-const ZapIcon = (props) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-    </svg>
-);
 const MenuIcon = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
     <line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" />
@@ -141,7 +136,7 @@ const DashboardPage = () => {
     return (
         <div>
             <h1 className="text-3xl font-bold text-gray-800 mb-6">Dashboard</h1>
-            <p className="text-gray-500 mb-6">Monday, 22 September 2025, 11:11 PM</p>
+            <p className="text-gray-500 mb-6">Tueday, 23 September 2025</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
                 <div className="bg-white p-6 rounded-lg shadow-md">
                     <h3 className="font-bold text-lg text-green-600">Today's Sales</h3>
@@ -646,9 +641,8 @@ export default function App() {
   
   const Sidebar = () => (
      <aside className={`bg-white text-gray-800 w-64 space-y-2 py-4 px-2 absolute inset-y-0 left-0 transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:relative md:translate-x-0 transition-transform duration-200 ease-in-out z-30 shadow-lg md:shadow-none`}>
-        <div className="flex items-center space-x-2 px-4 pb-4 border-b mb-2">
-            <ZapIcon className="w-8 h-8 text-blue-600" />
-            <span className="text-2xl font-bold tracking-tight">Vyapar<span className="text-blue-600">Plus</span></span>
+        <div className="flex items-center justify-center px-2 py-2 border-b mb-2">
+            <img src="/VyaparPlus_logo.png" alt="VyaparPlus Logo" className="h-30 w-auto" />
         </div>
         <ul>
             {navItems.map(item => (
@@ -672,9 +666,8 @@ export default function App() {
             <button onClick={() => setSidebarOpen(true)} className="text-gray-600">
                 <MenuIcon className="h-6 w-6"/>
             </button>
-            <div className="flex items-center space-x-2">
-                <ZapIcon className="w-7 h-7 text-blue-600" />
-                <span className="text-xl font-bold tracking-tight">Vyapar<span className="text-blue-600">Plus</span></span>
+            <div className="flex items-center">
+                 <img src="/VyaparPlus_logo.jpeg" alt="VyaparPlus Logo" className="h-50 w-auto" />
             </div>
         </header>
         <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-6">
